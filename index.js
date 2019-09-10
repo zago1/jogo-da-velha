@@ -68,6 +68,7 @@ function init() {
     clearButtons();
     player = '';
     changePlayer();
+    count = 0;
 }
 
 init();
