@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game">
+    <p class="title">Jogo da Velha</p>
+      <table>
+        <tr>
+          <td><button class="btn" onclick="onClick('btn1')" id="btn1"></button></td>
+          <td><button class="btn" onclick="onClick('btn2')" id="btn2"></button></td>
+          <td><button class="btn" onclick="onClick('btn3')" id="btn3"></button></td>
+        </tr>
+        <tr>
+          <td><button class="btn" onclick="onClick('btn4')" id="btn4"></button></td>
+          <td><button class="btn" onclick="onClick('btn5')" id="btn5"></button></td>
+          <td><button class="btn" onclick="onClick('btn6')" id="btn6"></button></td>
+        </tr>
+        <tr>
+          <td><button class="btn" onclick="onClick('btn7')" id="btn7"></button></td>
+          <td><button class="btn" onclick="onClick('btn8')" id="btn8"></button></td>
+          <td><button class="btn" onclick="onClick('btn9')" id="btn9"></button></td>
+        </tr>
+      </table>
+      <div class="info">
+        <p id="player"></p>
+        <button class="play-again" onClick="init()">
+            Jogar novamente
+        </button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
