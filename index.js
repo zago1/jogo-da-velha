@@ -3,20 +3,22 @@ let counter = 0;
 
 function onClick(id) {
     const button = document.getElementById(id);
-    
+
     counter++;
 
     button.setAttribute('disabled', true);
-    button.innerHTML = "<p class='player-text'>"+player+"</p>";
+    button.innerHTML = "<p class='player-text'>" + player + "</p>";
 
 
     if (checkWin()) {
         alert('Jogador ' + player + ' ganhou!!!');
+        counter = 0;
         return;
     }
 
     if (counter >= 9) {
         alert('Deu Velha!');
+        counter = 0;
         return;
     }
 
@@ -24,7 +26,7 @@ function onClick(id) {
 }
 
 function checkWin() {
-    const 
+    const
         btn1 = document.getElementById('btn1').innerText,
         btn2 = document.getElementById('btn2').innerText,
         btn3 = document.getElementById('btn3').innerText,
@@ -35,15 +37,15 @@ function checkWin() {
         btn8 = document.getElementById('btn8').innerText,
         btn9 = document.getElementById('btn9').innerText;
 
-    if( 
-        (btn1 === player && btn2 === player && btn3 === player) || 
+    if (
+        (btn1 === player && btn2 === player && btn3 === player) ||
         (btn4 === player && btn5 === player && btn6 === player) ||
         (btn7 === player && btn8 === player && btn9 === player) ||
         (btn1 === player && btn4 === player && btn7 === player) ||
         (btn2 === player && btn5 === player && btn8 === player) ||
         (btn3 === player && btn6 === player && btn9 === player) ||
         (btn1 === player && btn5 === player && btn9 === player) ||
-        (btn3 === player && btn5 === player && btn7 === player) 
+        (btn3 === player && btn5 === player && btn7 === player)
     ) return true;
 
     return false;
@@ -58,7 +60,7 @@ function changePlayer() {
 
 function clearButtons() {
     for (let i = 1; i <= 9; i++) {
-        const btn = document.getElementById('btn'+i);
+        const btn = document.getElementById('btn' + i);
         btn.innerText = "";
         btn.removeAttribute('disabled');
     }
